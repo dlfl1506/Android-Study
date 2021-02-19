@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bottom_profile"
+        android:icon="@drawable/ic_person_outline"
+        android:title=""
+        app:labelVisibilityMode="unlabeled"
+        />
+    <item
+        android:id="@+id/bottom_chat"
+        android:icon="@drawable/ic_chat"
+        android:title=""
+        app:labelVisibilityMode="unlabeled"
+        />
+
+    <item
+        android:id="@+id/bottom_shop"
+        android:icon="@drawable/ic_grid"
+        app:labelVisibilityMode="unlabeled"
+        android:title="" />
+
+    <item
+        android:id="@+id/bottom_dot"
+        android:icon="@drawable/ic_dot"
+        app:labelVisibilityMode="unlabeled"
+        android:title="" />
+
+</menu>

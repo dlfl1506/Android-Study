@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:contentInsetStart="0dp"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:id="@+id/toolbar_header"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:text="채팅"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            />
+
+        <ImageView
+            android:id="@+id/header_search"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_search"
+            android:layout_toLeftOf="@+id/header_chatplus"
+            android:layout_marginRight="20dp"
+            />
+        <ImageView
+            android:id="@+id/header_chatplus"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_chatplus"
+            android:layout_toLeftOf="@id/header_setiings"
+            android:layout_marginRight="20dp"
+            />
+        <ImageView
+            android:id="@+id/header_setiings"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_settings"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            />
+
+
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>
