@@ -34,10 +34,12 @@ public class MovieViewModel extends ViewModel {
     }
 
     public void findAll(){
+        Log.d(TAG, "findAll: 호출됨");
         Call<ResponseDto<List<Movie>>> call = MovieService.retrofit.create(MovieService.class).findAll();
         call.enqueue(new Callback<ResponseDto<List<Movie>>>() {
             @Override
             public void onResponse(Call<ResponseDto<List<Movie>>> call, Response<ResponseDto<List<Movie>>> response) {
+                Log.d(TAG, "onResponse: 호출됨");
                 ResponseDto<List<Movie>> result = response.body();
                 mtMovie.setValue(result.getData());
             }

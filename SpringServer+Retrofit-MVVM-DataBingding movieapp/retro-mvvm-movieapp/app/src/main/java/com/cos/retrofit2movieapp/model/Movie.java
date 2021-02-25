@@ -34,7 +34,7 @@ public class Movie {
     public static void loadImage(RoundedImageView view, String mediumCoverImage){
 
         Log.d(TAG, "loadImage: ");
-        
+
         Glide.with(view.getContext())
                 .load(mediumCoverImage)
                 .placeholder(R.drawable.main)

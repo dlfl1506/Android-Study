@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "onCreate: 호출됨");
         setContentView(R.layout.activity_main);
 
         init();
@@ -61,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
     private void initListener(){
         ItemTouchHelper.SimpleCallback simpleCallback = new ItemTouchHelper.SimpleCallback(0,  ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
 
-
             @Override
             public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
                 return true;
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 Log.d(TAG, "onSwiped: "+viewHolder.getAdapterPosition());
                 long id = movieAdapter.getMovieId(viewHolder.getAdapterPosition());
-               movieViewModel.deleteById(id);
+                movieViewModel.deleteById(id);
             }
         };
 

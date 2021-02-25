@@ -1,5 +1,6 @@
 package com.cos.retrofit2movieapp.adapter;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,6 +45,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
     @Override
     public MovieViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
+        Log.d(TAG, "onCreateViewHolder: 호출됨 ");
         CardItemBinding cardItemBinding = DataBindingUtil.inflate(
                 LayoutInflater.from(mContext),
                 R.layout.card_item,
@@ -56,6 +58,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
 
     @Override
     public void onBindViewHolder(@NonNull MovieViewHolder holder, int position) {
+        Log.d(TAG, "onBindViewHolder: 호출됨");
         holder.cardItemBinding.setMovie(movies.get(position));
     }
 
@@ -71,6 +74,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
 
         public MovieViewHolder(@NonNull CardItemBinding cardItemBinding) {
             super(cardItemBinding.getRoot());
+            Log.d(TAG, "MovieViewHolder: 호출됨");
             this.cardItemBinding = cardItemBinding;
         }
     }

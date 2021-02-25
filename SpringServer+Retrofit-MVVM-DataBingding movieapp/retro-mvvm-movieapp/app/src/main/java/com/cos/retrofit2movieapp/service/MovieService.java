@@ -21,7 +21,7 @@ public interface MovieService {
     Call<ResponseDto> deleteById(@Path("id") long id);
 
     Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl("http://172.17.108.7:8000/")
+            .baseUrl("http://192.168.35.175:8000/")
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 }
